@@ -6,7 +6,7 @@ export const useMovieList = async (props?: { query?: any }) => {
     const config = useRuntimeConfig();
     const apiKey = config.public.API_KEY;
   
-    const url = new URL("http://www.omdbapi.com?s=" + search + "&apikey=" + apiKey);
+    const url = new URL("https://www.omdbapi.com?s=" + search + "&apikey=" + apiKey);
     const params = new URLSearchParams(url.search);
     if (query) {
       Object.keys(query)?.forEach(key => {
